@@ -10,6 +10,10 @@ const HouseCard = ({ house }) => {
 
   const isForSale = property.status === "Sale";
 
+  const handleScroll = () =>{
+    window.scrollTo(0,0)
+  }
+
   const priceDisplay = isForSale 
     ? `₵${pricing.amount?.toLocaleString()}`
     : pricing.perNight 
@@ -25,7 +29,7 @@ const HouseCard = ({ house }) => {
       viewport={{ once: true }}
       className="group"
     >
-      <Link to={`/house/${id}`}>
+      <Link onClick={handleScroll} to={`/house/${id}`}>
         <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
 
           {/* Image */}
