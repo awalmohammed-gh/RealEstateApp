@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({onLoginClick}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState(false);
 
@@ -93,12 +93,12 @@ const navLinks = [
 
         {/* Desktop Call to Action Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <NavLink 
-            to="/login"
+          <button
+            onClick={onLoginClick}
             className="px-5 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
           >
             Sign In
-          </NavLink>
+          </button>
           <button className="px-5 py-2.5 text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 rounded-lg shadow-sm shadow-purple-200 transition-colors">
             Add Listing
           </button>

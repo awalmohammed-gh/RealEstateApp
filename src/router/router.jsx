@@ -9,6 +9,7 @@ import PropertiesDetails from '../pages/PropertiesDetails'
 import PropertyPerPage from '../pages/PropertyPerPage'
 import Listings from '../pages/Listings'
 import MakeOffer from '../pages/MakeOffer'
+import AgentDetailsPage from '../pages/AgentDetailsPage'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
             <Route path='offer' element={<MakeOffer/>} />
             <Route path='/:status' element={<PropertyPerPage/>} />
             <Route path='agents' element={<Agents />} />
+            <Route path='agent/:id' element={<AgentDetailsPage />} />
             <Route path='contact' element={<Contact />} />
             <Route path='login' element={<LoginForm />} />
          </Route>
